@@ -242,7 +242,7 @@ export default function DashboardPage() {
     if (filteredData.length === 0) return [];
     const stokPerHari = {};
     filteredData.forEach((row) => {
-      const key = row.Tanggal.toLocaleDateString("id-ID", { day: "2-digit", month: "short", year: "numeric" });
+      const key = row.Tanggal.toLocaleDateString("id-ID", { day: "2-digit", month: "short" });
       if (!stokPerHari[key]) stokPerHari[key] = { Target: 0, Realisasi: 0 };
       stokPerHari[key].Target += row.Target;
       stokPerHari[key].Realisasi += row.Realisasi;
@@ -251,8 +251,7 @@ export default function DashboardPage() {
       Hari: hari,
       Target: Math.round(val.Target),
       Realisasi: Math.round(val.Realisasi),
-      date: new Date(hari.split(' ').reverse().join(' ')), // Untuk sorting: "01 Jan 2024" -> "2024 Jan 01"
-    })).sort((a, b) => a.date - b.date);
+    })).sort((a, b) => new Date(a.Hari.split(' ')[1] + ' ' + a.Hari.split(' ')[0]) - new Date(b.Hari.split(' ')[1] + ' ' + b.Hari.split(' ')[0])); // Sort by date
   }, [filteredData]);
 
   // Tentukan apakah tampilkan LineChart atau BarChart untuk mode harian
@@ -298,7 +297,7 @@ export default function DashboardPage() {
       setExporting(false);
     }
   };
-
+  {/*
   // Export PDF (menggunakan jsPDF dan autotable)
   const handleExportPDF = () => {
     if (filteredData.length === 0) {
@@ -361,7 +360,7 @@ export default function DashboardPage() {
       setExporting(false);
     }
   };
-
+  */}
   if (!mounted) {
     return (
       <div className="p-6 text-center">
@@ -501,6 +500,7 @@ export default function DashboardPage() {
             >
               <FaDownload /> {exporting ? "Mengekspor..." : "Download Excel"}
             </button>
+            {/*
             <button
               onClick={handleExportPDF}
               disabled={exporting || filteredData.length === 0}
@@ -508,6 +508,7 @@ export default function DashboardPage() {
             >
               <FaFilePdf /> {exporting ? "Mengekspor..." : "Download PDF"}
             </button>
+            */}
           </div>
         </div>
 
@@ -558,6 +559,8 @@ export default function DashboardPage() {
                   </p>
                 </div>
               </div>
+
+              
             </div>
           ))}
         </div>
@@ -775,3 +778,4 @@ export default function DashboardPage() {
     </div>
   );
 }
+
