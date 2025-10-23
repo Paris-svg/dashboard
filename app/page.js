@@ -37,7 +37,7 @@ export default function Home() {
               ${poppins.className} animate-fadeIn
             `}
           >
-            <span className="bg-gradient-to-r from-white via-[#c4d434] to-[#a3b31d] bg-clip-text text-transparent leading-tight">
+            <span className="bg-[#ffe000] bg-clip-text text-transparent leading-tight">
               Selamat Datang
             </span>
             <img
@@ -49,10 +49,39 @@ export default function Home() {
 
           {/* Subheading */}
           <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl animate-slideUp">
-            Sistem Informasi Kementerian Pertanian – menuju pertanian modern, berkelanjutan, dan berdaya saing global.
+            Pusat Data dan Sistem Informasi Pertanian - Kementerian Pertanian Republik Indonesia
           </p>
 
           {/* Tombol pakai Inter */}
+          <div className="flex flex-col md:flex-row gap-6 mt-10">
+            <button
+              onClick={() => router.push("/dashboard")}
+              className={`
+                mt-10 px-10 py-4 font-semibold rounded-full text-lg
+                bg-[#ffe000] text-black
+                hover:from-transparent hover:to-transparent hover:border-2 hover:border-[#c4d434] hover:text-[#c4d434]
+                active:scale-95 active:shadow-inner
+                transform hover:scale-110 transition-all duration-300
+                animate-bounceOnce
+              `}
+            >
+              Dashboard 1
+            </button>
+            <button
+              onClick={() => router.push("/dashboard2")}
+              className={`
+                mt-10 px-10 py-4 font-semibold rounded-full text-lg
+                bg-[#ffe000] text-black
+                hover:from-transparent hover:to-transparent hover:border-2 hover:border-[#c4d434] hover:text-[#c4d434]
+                active:scale-95 active:shadow-inner
+                transform hover:scale-110 transition-all duration-300
+                animate-bounceOnce
+              `}
+            >
+              Dashboard 2
+            </button>
+          </div>
+          {/*
           <button
             onClick={() => router.push("/dashboard")}
             className={`
@@ -65,8 +94,23 @@ export default function Home() {
               animate-bounceOnce
             `}
           >
-            Masuk ke Dashboard
+            Dashboard 1
           </button>
+          <button
+            onClick={() => router.push("/dashboard")}
+            className={`
+              mt-10 px-10 py-4 font-semibold rounded-full text-lg
+              bg-gradient-to-r from-[#c4d434] to-[#a3b31d] text-black
+              shadow-lg hover:shadow-[0_0_30px_#c4d434]
+              hover:from-transparent hover:to-transparent hover:border-2 hover:border-[#c4d434] hover:text-[#c4d434]
+              active:scale-95 active:shadow-inner
+              transform hover:scale-110 transition-all duration-300
+              animate-bounceOnce
+            `}
+          >
+            Dashboard 2
+          </button>
+          */}
         </div>
       </div>
 
