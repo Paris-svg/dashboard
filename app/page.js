@@ -65,7 +65,7 @@ export default function Home() {
                 animate-bounceOnce
               `}
             >
-              Dashboard 1
+              Dashboard Sergab
             </button>
             <button
               onClick={() => router.push("/dashboard2")}
@@ -78,7 +78,7 @@ export default function Home() {
                 animate-bounceOnce
               `}
             >
-              Dashboard 2
+              Dashboard Bulog
             </button>
           </div>
           {/*
