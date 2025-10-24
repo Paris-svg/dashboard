@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.dashboard-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #1e1e1e;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'Merriweather', serif;
+  color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-buttons button {
+  margin-left: 0.5rem;
+}
+
+.home-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.pdf-btn {
+  background: gold;
+  color: #111;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pdf-btn:hover {
+  background: #e6c200;
+}
+
+.excel-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.excel-btn:hover {
+  background: #45a049;
+}
+
+.filter-card {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.filter-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.filter-grid select, .filter-btn {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #f5f5f5;
+}
+
+.filter-btn {
+  background: #008CBA;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #007bb5;
+}
+
+.table-container {
+  background: rgba(255,255,255,0.05);
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+  background: rgba(255,255,255,0.1);
+}
+
+tr:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.error {
+  color: #ff4c4c;
+  margin-top: 1rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Dashboard2Elegant.css */
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+.dashboard-header {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.bg-pattern {
+  background: #1f2937;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+table {
+  font-family: 'Playfair Display', serif;
+}
