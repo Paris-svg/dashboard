@@ -23,7 +23,7 @@ export default function Home() {
       {/* Background */}
       <div
         className="h-full w-full bg-cover bg-center relative"
-        style={{ backgroundImage: `url('/cover.jpg')` }}
+        style={{ backgroundImage: `url('/kementan.jpg')` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
